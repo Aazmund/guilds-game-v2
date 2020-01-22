@@ -85,5 +85,15 @@ public class MapGenerator extends Map {
                 }
             }
         }
+
+        counter = 0;
+        for (int i = 0; i < 11; i++){
+            for(int j = 0; j < 11; j++){
+                if (map[i][j] == "1"){
+                    map[i][j] = cellsGenerator.getSpecCellElem(counter);
+                    counter++;
+                }
+            }
+        }
     }
 }

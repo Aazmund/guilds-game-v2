@@ -6,10 +6,12 @@ public class CellsGenerator {
 
     ArrayList<Integer>square = new ArrayList<>();
     ArrayList<Integer>line = new ArrayList<>();
-    int spec_cells[] = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16};
+    int spec_cell[] = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16};
+    ArrayList<Integer>spec_cells = new ArrayList<>();
 
     public CellsGenerator(){
         gen_square();
+        genSpecCells();
     }
 
     public void gen_square(){
@@ -26,12 +28,17 @@ public class CellsGenerator {
         }
     }
 
-    public void gen_line(){
+    public void genSpecCells(){
+
+        for(int i = 0; i < 16; i++){
+            spec_cells.add(i, i+1);
+        }
+
         for (int i = 15; i >= 0; i--){
             int j = (int) (Math.random() * (i + 1));
-            int buf = spec_cells[i];
-            spec_cells[i] = spec_cells[j];
-            spec_cells[j] = buf;
+            int buf = spec_cells.get(i);
+            spec_cells.set(i, spec_cells.get(j));
+            spec_cells.set(j, buf);
         }
     }
 
@@ -39,7 +46,7 @@ public class CellsGenerator {
         int config = (int) (Math.random()*2);
         switch (config){
             case (0):
-                line.add(1);
+                line.add(17);
                 line.add(0);
                 line.add(0);
                 line.add(0);
@@ -48,7 +55,7 @@ public class CellsGenerator {
                 line.add(0);
                 line.add(0);
                 line.add(0);
-                line.add(1);
+                line.add(17);
                 break;
         }
     }
@@ -59,5 +66,9 @@ public class CellsGenerator {
 
     String getConfigLineElem(int index){
         return line.get(index).toString();
+    }
+
+    String getSpecCellElem(int index){
+        return spec_cells.get(index).toString();
     }
 }
