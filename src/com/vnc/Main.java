@@ -1,6 +1,7 @@
 package com.vnc;
 
 import javax.swing.*;
+import java.util.Scanner;
 
 public class Main {
 
@@ -24,15 +25,34 @@ public class Main {
 //        jFrame.setSize(800, 600);
 //        jFrame.setVisible(true);
 
-        MapGenerator mapGenerator = new MapGenerator(tileMap);
+        MapGenerator mapGenerator = new MapGenerator();
+        mapGenerator.generateMap(tileMap);
 
-        int c = 0;
+        Player player = new Player();
 
-        for (int i = 0; i < 11; i++){
-            for (int j = 0; j < 11; j++){
-                System.out.print(tileMap[i][j] + "  ");
+        int choice;
+        int movement = 0;
+        Scanner sc = new Scanner(System.in);
+        player.setStartPosition();
+        while (true){
+            System.out.println("1 - сгенерировать ход");
+            System.out.println("0 - выход");
+            choice = sc.nextInt();
+            if (choice == 1) {
+                movement = sc.nextInt();
+                player.move(movement);
+                player.getCurrentPosition();
+            }else{
+                break;
             }
-            System.out.println();
         }
+
+
+//        for (int i = 0; i < 11; i++){
+//            for (int j = 0; j < 11; j++){
+//                System.out.print(tileMap[i][j] + "  ");
+//            }
+//            System.out.println();
+//        }
     }
 }

@@ -2,10 +2,7 @@ package com.vnc;
 
 public class MapGenerator extends Map {
 
-    public MapGenerator(){}
-
-    public MapGenerator(String map[][]){
-
+    public void generateMap(String map[][]){
         CellsGenerator cellsGenerator = new CellsGenerator();
 
         int counter = 0;
