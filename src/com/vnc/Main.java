@@ -35,10 +35,11 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         player.setStartPosition();
         while (true){
-            System.out.println("1 - сгенерировать ход");
+            System.out.println("1 - задать ход");
             System.out.println("0 - выход");
             choice = sc.nextInt();
             if (choice == 1) {
+                System.out.print("Введи ход: ");
                 movement = sc.nextInt();
                 player.move(movement);
                 player.getCurrentPosition();
