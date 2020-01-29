@@ -34,6 +34,7 @@ public class Main {
         int movement = 0;
         Scanner sc = new Scanner(System.in);
         player.setStartPosition();
+//        player.setPosition(5,9);
         while (true){
             System.out.println("1 - задать ход");
             System.out.println("0 - выход");
