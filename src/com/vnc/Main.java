@@ -1,4 +1,4 @@
-package com.vnc;
+﻿package com.vnc;
 
 import javax.swing.*;
 import java.util.Scanner;
