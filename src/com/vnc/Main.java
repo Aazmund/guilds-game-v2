@@ -1,5 +1,6 @@
 package com.vnc;
 
+import javax.swing.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -106,8 +107,14 @@ public class Main {
     }
 
     public static void main(String[] args) {
+
+        Interface Window = new Interface();
+        JFrame jFrame = Interface.getFrame();
+
+		JFrame Start_Game = Window.getFrameStart();
+
         Scanner sc = new Scanner(System.in);
-        configuration();
+//        configuration();
 
         int choice;
         int movement = 0;
@@ -134,5 +141,6 @@ public class Main {
             }
             System.out.println();
         }
+
     }
 }
