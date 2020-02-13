@@ -23,7 +23,7 @@ public class Main {
     private static ArrayList<Player> players = new ArrayList<>();
     private static short[] skills = {1,2,3,4,5,6,7,8,9,10,11,12};
 
-    private static void configuration(){
+    public static void configuration(int player_count){
 
         MapGenerator mapGenerator = new MapGenerator();
         mapGenerator.generateMap(tileMap);
@@ -34,9 +34,7 @@ public class Main {
             skills[i] = skills[j];
             skills[j] = buf;
         }
-        System.out.println("Введите количество игроков");
-        Scanner sc = new Scanner(System.in);
-        int player_count = sc.nextInt();
+
         for (int i = 0; i < player_count; i++){
             Player player = new Player();
             player.setStartPosition();
@@ -110,15 +108,14 @@ public class Main {
     public static void main(String[] args) {
 
         Interface Window = new Interface();
-        JFrame jFrame = Interface.getFrame();
 
-		JFrame Start_Game = Window.getFrameStart();
-
-        Scanner sc = new Scanner(System.in);
-        configuration();
+        Interface.StartDialog Start = new Interface.StartDialog();
+        Start.setVisible(true);
 
         int choice;
         int movement = 0;
+
+
 
 //        player.setStartPosition();
 //        while (true){
@@ -144,4 +141,6 @@ public class Main {
         }
 
     }
+
+
 }
