@@ -39,6 +39,7 @@ public class Main {
         int player_count = sc.nextInt();
         for (int i = 0; i < player_count; i++){
             Player player = new Player();
+            player.setStartPosition();
             players.add(player);
             switch (skills[i]){
                 case(1):
@@ -114,7 +115,7 @@ public class Main {
 		JFrame Start_Game = Window.getFrameStart();
 
         Scanner sc = new Scanner(System.in);
-//        configuration();
+        configuration();
 
         int choice;
         int movement = 0;
