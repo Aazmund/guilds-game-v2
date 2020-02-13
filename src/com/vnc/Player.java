@@ -11,8 +11,13 @@ public class Player {
     private ArrayList<Pair> innerPairs= new ArrayList<>();
     private ArrayList<Pair> outerPairs= new ArrayList<>();
     private boolean resolution = true;
-    short[] innerList = {1,5,1,6,1,7,2,8,3,9,4,9,5,9,6,9,7,9,8,8,9,7,9,6,9,5,9,4,9,3,8,2,7,1,6,1,5,1,4,1,3,1,2,2,1,3,1,4};
-    short[] outerList = {0,0,0,1,0,2,0,3,0,4,0,5,0,6,0,7,0,8,0,9,0,10,1,10,2,10,3,10,4,10,5,10,6,10,7,10,8,10,9,10,10,10,10,9,10,8,10,7,10,6,10,5,10,4,10,3,10,2,10,1,10,0,9,0,8,0,7,0,6,0,5,0,4,0,3,0,2,0,1,0};
+    private short[] innerList = {1,5,1,6,1,7,2,8,3,9,4,9,5,9,6,9,7,9,8,8,9,7,9,6,9,5,9,4,9,3,8,2,7,1,6,1,5,1,4,1,3,1,2,2,1,3,1,4};
+    private short[] outerList = {0,0,0,1,0,2,0,3,0,4,0,5,0,6,0,7,0,8,0,9,0,10,1,10,2,10,3,10,4,10,5,10,6,10,7,10,8,10,9,10,10,10,10,9,10,8,10,7,10,6,10,5,10,4,10,3,10,2,10,1,10,0,9,0,8,0,7,0,6,0,5,0,4,0,3,0,2,0,1,0};
+    private String type;
+    private int gold;
+    private int forest;
+    private int sheep;
+    private int horse;
 
 
     public Player(){
@@ -30,6 +35,54 @@ public class Player {
             outerPairs.add(pair);
             i += 1;
         }
+    }
+
+    public int getHorse() {
+        return horse;
+    }
+
+    public void setHorse(int horse) {
+        this.horse = horse;
+    }
+
+    public int getGold() {
+        return gold;
+    }
+
+    public void setGold(int gold) {
+        this.gold = gold;
+    }
+
+    public int getForest() {
+        return forest;
+    }
+
+    public void setForest(int forest) {
+        this.forest = forest;
+    }
+
+    public int getSheep() {
+        return sheep;
+    }
+
+    public void setSheep(int sheep) {
+        this.sheep = sheep;
+    }
+
+    public void addHorse(int horse){
+        this.horse += horse;
+    }
+
+    public void addGold(int gold){
+        this.gold += gold;
+    }
+
+    public void addForest(int forest){
+        this.forest += forest;
+    }
+
+    public void addSheep(int sheep){
+        this.sheep += sheep;
     }
 
     private void searchOuterIndex(){
@@ -380,30 +433,20 @@ public class Player {
     public void move(int movement){
 
         if(x == 0 && y >= 0 && y <= 9){
-            System.out.println("Кидаю в 1 кейс");
             moveOnOuterCircle(1, movement);
         }else if(x >= 0 && x <= 9 && y == 10){
-            System.out.println("Кидаю в 2 кейс");
             moveOnOuterCircle(2, movement);
         }else if(x == 10 && y <= 10 && y >= 1){
-            System.out.println("Кидаю в 3 кейс");
             moveOnOuterCircle(3, movement);
         }else if(y == 0 && x <= 10 && x >= 1){
-            System.out.println("Кидаю в 4 кейс");
             moveOnOuterCircle(4, movement);
-
-
         }else if(x >= 1 && x <= 4 && y >= 5 && y <= 9){
-            System.out.println("Кидаю в 5 кейс");
             moveOnInnerCircle(5, movement);
         }else if(x >= 5 && x <= 9 && y <= 9 && y >= 6){
-            System.out.println("Кидаю в 6 кейс");
             moveOnInnerCircle(6, movement);
         }else if(x <= 9 && x >= 6 && y <= 5 && y >=1){
-            System.out.println("Кидаю в 7 кейс");
             moveOnInnerCircle(7, movement);
         }else if(x >= 1 && x<= 5 && y >= 1 && y <= 4){
-            System.out.println("Кидаю в 8 кейс");
             moveOnInnerCircle(8, movement);
         }
     }
