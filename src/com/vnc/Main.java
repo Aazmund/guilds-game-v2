@@ -2,7 +2,10 @@ package com.vnc;
 
 import javax.swing.*;
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.Scanner;
+
+
 
 public class Main {
 
@@ -105,40 +108,34 @@ public class Main {
         }
     }
 
+
+    public static int steps() {
+        int min = 1;
+        int max = 6;
+        int diff = max - min;
+        Random random = new Random();
+        int i = random.nextInt(diff + 1) + min;
+        System.out.println("Выпало: " + i);
+        return i;
+    }
+
+
     public static void main(String[] args) {
 
-        Interface Window = new Interface();
+        Window window = new Window();
 
-        Interface.StartDialog Start = new Interface.StartDialog();
+        Window.StartDialog Start = new Window.StartDialog();
         Start.setVisible(true);
-
-        int choice;
-        int movement = 0;
-
-
-
-//        player.setStartPosition();
-//        while (true){
-//            System.out.println("1 - задать ход");
-//            System.out.println("0 - выход");
-//            choice = sc.nextInt();
-//            if (choice == 1) {
-//                System.out.print("Введи ход: ");
-//                movement = sc.nextInt();
-//                player.move(movement);
-//                player.getCurrentPosition();
-//            }else{
-//                break;
-//            }
-//        }
-
 
         for (int i = 0; i < 11; i++){
             for (int j = 0; j < 11; j++){
-                System.out.print(tileMap[i][j] + "  ");
+                System.out.print(tileMap[i][j] + "\t");
             }
             System.out.println();
         }
+
+        Player.setStartPosition();
+
 
     }
 

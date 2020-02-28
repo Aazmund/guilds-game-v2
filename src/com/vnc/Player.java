@@ -4,13 +4,13 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Player {
-    private int x;
-    private int y;
-    private int index;
+    private static int x;
+    private static int y;
+    private static int index;
     private Scanner sc = new Scanner(System.in);
-    private ArrayList<Pair> innerPairs= new ArrayList<>();
-    private ArrayList<Pair> outerPairs= new ArrayList<>();
-    private boolean resolution = true;
+    private static ArrayList<Pair> innerPairs= new ArrayList<>();
+    private static ArrayList<Pair> outerPairs= new ArrayList<>();
+    private static boolean resolution = true;
     private short[] innerList = {1,5,1,6,1,7,2,8,3,9,4,9,5,9,6,9,7,9,8,8,9,7,9,6,9,5,9,4,9,3,8,2,7,1,6,1,5,1,4,1,3,1,2,2,1,3,1,4};
     private short[] outerList = {0,0,0,1,0,2,0,3,0,4,0,5,0,6,0,7,0,8,0,9,0,10,1,10,2,10,3,10,4,10,5,10,6,10,7,10,8,10,9,10,10,10,10,9,10,8,10,7,10,6,10,5,10,4,10,3,10,2,10,1,10,0,9,0,8,0,7,0,6,0,5,0,4,0,3,0,2,0,1,0};
     private String type;
@@ -85,7 +85,7 @@ public class Player {
         this.sheep += sheep;
     }
 
-    private void searchOuterIndex(){
+    private static void searchOuterIndex(){
         for (int i = 0; i < outerPairs.size(); i++){
             if(x == outerPairs.get(i).getX() && y == outerPairs.get(i).getY()){
                 index = i;
@@ -93,7 +93,7 @@ public class Player {
         }
     }
 
-    private void searchInnerIndex(){
+    private static void searchInnerIndex(){
         for (int i = 0; i < innerPairs.size(); i++){
             if(x == innerPairs.get(i).getX() && y == innerPairs.get(i).getY()){
                 index = i;
@@ -101,7 +101,7 @@ public class Player {
         }
     }
 
-    private void moveOnOuterCircle(int param, int movement){
+    private static void moveOnOuterCircle(int param, int movement){
         searchOuterIndex();
         switch (param){
             case(1):
@@ -109,7 +109,8 @@ public class Player {
                     System.out.println("Перейти на внутреннйи круг? (секция 5)");
                     System.out.println("1 - yes");
                     System.out.println("2 - no");
-                    int answer = sc.nextInt();
+//                    int answer = sc.nextInt();
+                    int answer = 2;
                     switch (answer){
                         case(1):
                             movement = movement - (5 - y) - 1;
@@ -149,7 +150,8 @@ public class Player {
                     System.out.println("Перейти на внутреннйи круг? (секция 6)");
                     System.out.println("1 - yes");
                     System.out.println("2 - no");
-                    int answer = sc.nextInt();
+//                    int answer = sc.nextInt();
+                    int answer = 2;
                     switch (answer){
                         case(1):
                             movement = movement - (5 - x) - 1;
@@ -188,7 +190,8 @@ public class Player {
                     System.out.println("Перейти на внутреннйи круг? (секция 7)");
                     System.out.println("1 - yes");
                     System.out.println("2 - no");
-                    int answer = sc.nextInt();
+//                    int answer = sc.nextInt();
+                    int answer = 2;
                     switch (answer){
                         case(1):
                             movement = movement - (10 - y) - 1;
@@ -227,7 +230,8 @@ public class Player {
                     System.out.println("Перейти на внутреннйи круг? (секция 8)");
                     System.out.println("1 - yes");
                     System.out.println("2 - no");
-                    int answer = sc.nextInt();
+//                    int answer = sc.nextInt();
+                    int answer = 2;
                     switch (answer){
                         case(1):
                             movement = movement - (x - 5) - 1;
@@ -264,7 +268,7 @@ public class Player {
         }
     }
 
-    private void moveOnInnerCircle(int param, int movement){
+    private static void moveOnInnerCircle(int param, int movement){
         searchInnerIndex();
         switch (param){
             case(5):
@@ -272,7 +276,8 @@ public class Player {
                     System.out.println("Перейти на внешний круг? (секция 1)");
                     System.out.println("1 - yes");
                     System.out.println("2 - no");
-                    int answer = sc.nextInt();
+//                    int answer = sc.nextInt();
+                    int answer = 2;
                     switch (answer){
                         case(1):
                             movement --;
@@ -312,7 +317,8 @@ public class Player {
                     System.out.println("Перейти на внешний круг? (секция 2)");
                     System.out.println("1 - yes");
                     System.out.println("2 - no");
-                    int answer = sc.nextInt();
+//                    int answer = sc.nextInt();
+                    int answer = 2;
                     switch (answer){
                         case(1):
                             movement --;
@@ -352,7 +358,8 @@ public class Player {
                     System.out.println("Перейти на внешний круг? (секция 3)");
                     System.out.println("1 - yes");
                     System.out.println("2 - no");
-                    int answer = sc.nextInt();
+//                    int answer = sc.nextInt();
+                    int answer = 2;
                     switch (answer){
                         case(1):
                             movement --;
@@ -392,7 +399,8 @@ public class Player {
                     System.out.println("Перейти на внешний круг? (секция 4)");
                     System.out.println("1 - yes");
                     System.out.println("2 - no");
-                    int answer = sc.nextInt();
+//                    int answer = sc.nextInt();
+                    int answer = 2;
                     switch (answer){
                         case(1):
                             movement --;
@@ -430,7 +438,7 @@ public class Player {
         }
     }
 
-    public void move(int movement){
+    public static void move(int movement){
 
         if(x == 0 && y >= 0 && y <= 9){
             moveOnOuterCircle(1, movement);
@@ -451,9 +459,9 @@ public class Player {
         }
     }
 
-    public void setStartPosition(){
-        this.x = 0;
-        this.y = 0;
+    public static void setStartPosition(){
+        x = 0;
+        y = 0;
     }
 
     public void setPosition(int x, int y){
@@ -461,7 +469,7 @@ public class Player {
         this.y = y;
     }
 
-    public void getCurrentPosition(){
+    public static void getCurrentPosition(){
         System.out.println("x "+ x);
         System.out.println("y "+ y);
     }
