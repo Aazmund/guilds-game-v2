@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e8917262-02ed-462a-bd38-75d753eb7798" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/graphics/ЗОЛОТЫЕ ПЛАЩИ.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/ОРЛИНОЕ ГНЕЗДО.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/ХАЙГАРДЕН.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/ХАРЧЕВНЯ.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/ЦИТАДЕЛЬ.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/башни близнецы 2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/белая гавань порт.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/бордельь.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/горцы222.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/драконий камень — копия.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/железные острова.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/замок винтерфелл итог.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/замок дредфурд.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/красный замок2223.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/кротовый гоородок.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/ланниспорт.1ai.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/лесопилка1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/принцев перевал.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/риверранннн.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/ров кейлиннн.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/солнечное копье.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/старомест.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/утес кастерли.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/чаячий городок2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/черная заааводь.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/черный замок итог.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/штормовой предел2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/ярморочное поле городок.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/vnc/Fields.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/vnc/Window.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Ai/ЗОЛОТЫЕ ПЛАЩИ.ai" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Ai/ОРЛИНОЕ ГНЕЗДО.ai" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Ai/ХАЙГАРДЕН.ai" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Ai/ХАЙГАРДЕН.ai" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Ai/ХАРЧЕВНЯ.ai" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Ai/ЦИТАДЕЛЬ.ai" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Ai/башни близнецы 2.ai" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Ai/белая гавань порт.ai" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Ai/бордельь.ai" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Ai/горцы222.ai" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Ai/драконий камень — копия.ai" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Ai/драконий камень — копия.ai" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Ai/железные острова.ai" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Ai/замок винтерфелл итог.ai" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Ai/замок дредфурд.ai" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Ai/красный замок2223.ai" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Ai/красный замок2223.ai" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Ai/кротовый гоородок.ai" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Ai/кротовый гоородок.ai" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Ai/ланниспорт.1ai.ai" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Ai/лесопилка1.ai" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Ai/принцев перевал.ai" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Ai/риверранннн.ai" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Ai/ров кейлиннн.ai" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Ai/ров кейлиннн.ai" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Ai/солнечное копье.ai" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Ai/старомест.ai" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Ai/утес кастерли.ai" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Ai/чаячий городок2.ai" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Ai/чаячий городок2.ai" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Ai/черная заааводь.ai" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Ai/черный замок итог.ai" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Ai/черный замок итог.ai" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Ai/штормовой предел2.ai" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Ai/штормовой предел2.ai" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Ai/ярморочное поле городок.ai" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Png/ЗОЛОТЫЕ ПЛАЩИ.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Png/ОРЛИНОЕ ГНЕЗДО.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Png/ХАЙГАРДЕН.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Png/ХАРЧЕВНЯ.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Png/ЦИТАДЕЛЬ.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Png/башни близнецы 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Png/белая гавань порт.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Png/бордельь.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Png/горцы222.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Png/драконий камень — копия.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Png/железные острова.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Png/замок винтерфелл итог.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Png/замок дредфурд.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Png/красный замок2223.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Png/кротовый гоородок.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Png/ланниспорт.1ai.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Png/лесопилка1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Png/принцев перевал.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Png/риверранннн.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Png/ров кейлиннн.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Png/солнечное копье.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Png/старомест.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Png/утес кастерли.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Png/чаячий городок2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Png/черная заааводь.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Png/черный замок итог.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Png/штормовой предел2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Png/ярморочное поле городок.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Svg/ЗОЛОТЫЕ ПЛАЩИ.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Svg/ОРЛИНОЕ ГНЕЗДО.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Svg/ХАЙГАРДЕН.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Svg/ХАЙГАРДЕН.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Svg/ХАРЧЕВНЯ.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Svg/ЦИТАДЕЛЬ.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Svg/башни близнецы 2.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Svg/белая гавань порт.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Svg/бордельь.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Svg/горцы222.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Svg/драконий камень — копия.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Svg/драконий камень — копия.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Svg/железные острова.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Svg/замок винтерфелл итог.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Svg/замок дредфурд.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Svg/красный замок2223.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Svg/красный замок2223.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Svg/кротовый гоородок.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Svg/кротовый гоородок.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Svg/ланниспорт.1ai.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Svg/лесопилка1.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Svg/принцев перевал.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Svg/риверранннн.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Svg/ров кейлиннн.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Svg/ров кейлиннн.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Svg/солнечное копье.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Svg/старомест.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Svg/утес кастерли.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Svg/чаячий городок2.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Svg/чаячий городок2.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Svg/черная заааводь.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Svg/черный замок итог.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Svg/черный замок итог.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Svg/штормовой предел2.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Svg/штормовой предел2.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/Svg/ярморочное поле городок.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/guilds-game-v2/com/vnc/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/vnc/Interface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/vnc/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/vnc/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/vnc/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/vnc/Player.java" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1YGxs89AMeeYMwxHgRVkZHCwaEF" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.vnc.Main" />
+      <module name="guilds-game-v2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.vnc.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e8917262-02ed-462a-bd38-75d753eb7798" name="Default Changelist" comment="" />
+      <created>1582582936053</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1582582936053</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="414" y="176" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582583000367">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="176" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582583000367" />
+    <state x="689" y="305" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1582582975273">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="689" y="305" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582582975273" />
+    <state width="1877" height="303" key="GridCell.Tab.0.bottom" timestamp="1582749554167">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="303" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1582749554167" />
+    <state width="1877" height="303" key="GridCell.Tab.0.center" timestamp="1582749554166">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="303" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1582749554166" />
+    <state width="1877" height="303" key="GridCell.Tab.0.left" timestamp="1582749554166">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="303" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1582749554166" />
+    <state width="1877" height="303" key="GridCell.Tab.0.right" timestamp="1582749554166">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="303" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1582749554166" />
+    <state x="702" y="140" key="refactoring.ChangeSignatureDialog" timestamp="1582734117216">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="702" y="140" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582734117216" />
+  </component>
+</project>

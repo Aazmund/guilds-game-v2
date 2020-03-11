@@ -1,10 +1,7 @@
 package com.vnc;
 
-import javax.swing.*;
 import java.util.ArrayList;
 import java.util.Random;
-import java.util.Scanner;
-
 
 
 public class Main {
@@ -120,24 +117,20 @@ public class Main {
     }
 
 
+
     public static void main(String[] args) {
 
-        Window window = new Window();
+        Draw draw = new Draw();
+        Player player = new Player();
 
-        Window.StartDialog Start = new Window.StartDialog();
-        Start.setVisible(true);
-
-        for (int i = 0; i < 11; i++){
-            for (int j = 0; j < 11; j++){
-                System.out.print(tileMap[i][j] + "\t");
-            }
-            System.out.println();
-        }
-
-        Player.setStartPosition();
+        draw.getStartDialog();
+        draw.setMap(tileMap);
+        draw.setPlayer(player);
+        player.getDraw(draw);
+        player.getCurrentPosition();
+        draw.getFrame();
 
 
     }
-
 
 }

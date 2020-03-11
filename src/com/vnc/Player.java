@@ -1,13 +1,11 @@
 package com.vnc;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class Player {
     private static int x;
     private static int y;
     private static int index;
-    private Scanner sc = new Scanner(System.in);
     private static ArrayList<Pair> innerPairs= new ArrayList<>();
     private static ArrayList<Pair> outerPairs= new ArrayList<>();
     private static boolean resolution = true;
@@ -18,6 +16,11 @@ public class Player {
     private int forest;
     private int sheep;
     private int horse;
+
+    private static Draw draw;
+    public void  getDraw(Draw draw){
+        this.draw = draw;
+    }
 
 
     public Player(){
@@ -107,10 +110,7 @@ public class Player {
             case(1):
                 if (y + movement > 5 && y < 6 && resolution){
                     System.out.println("Перейти на внутреннйи круг? (секция 5)");
-                    System.out.println("1 - yes");
-                    System.out.println("2 - no");
-//                    int answer = sc.nextInt();
-                    int answer = 2;
+                    int answer = YesOrNoChoice();
                     switch (answer){
                         case(1):
                             movement = movement - (5 - y) - 1;
@@ -148,10 +148,7 @@ public class Player {
             case(2):
                 if(x + movement > 5 && x < 6 && resolution){
                     System.out.println("Перейти на внутреннйи круг? (секция 6)");
-                    System.out.println("1 - yes");
-                    System.out.println("2 - no");
-//                    int answer = sc.nextInt();
-                    int answer = 2;
+                    int answer = YesOrNoChoice();
                     switch (answer){
                         case(1):
                             movement = movement - (5 - x) - 1;
@@ -188,10 +185,7 @@ public class Player {
             case(3):
                 if (y - movement < 5 && y > 5 && resolution){
                     System.out.println("Перейти на внутреннйи круг? (секция 7)");
-                    System.out.println("1 - yes");
-                    System.out.println("2 - no");
-//                    int answer = sc.nextInt();
-                    int answer = 2;
+                    int answer = YesOrNoChoice();
                     switch (answer){
                         case(1):
                             movement = movement - (10 - y) - 1;
@@ -228,10 +222,7 @@ public class Player {
             case(4):
                 if(x - movement < 5 && x > 5 && resolution){
                     System.out.println("Перейти на внутреннйи круг? (секция 8)");
-                    System.out.println("1 - yes");
-                    System.out.println("2 - no");
-//                    int answer = sc.nextInt();
-                    int answer = 2;
+                    int answer = YesOrNoChoice();
                     switch (answer){
                         case(1):
                             movement = movement - (x - 5) - 1;
@@ -274,10 +265,7 @@ public class Player {
             case(5):
                 if (index + movement > 0 && index < 1 && resolution && movement != 0){
                     System.out.println("Перейти на внешний круг? (секция 1)");
-                    System.out.println("1 - yes");
-                    System.out.println("2 - no");
-//                    int answer = sc.nextInt();
-                    int answer = 2;
+                    int answer = YesOrNoChoice();
                     switch (answer){
                         case(1):
                             movement --;
@@ -315,10 +303,7 @@ public class Player {
             case(6):
                 if (index + movement > 6 && index < 7 && resolution && movement != 0){
                     System.out.println("Перейти на внешний круг? (секция 2)");
-                    System.out.println("1 - yes");
-                    System.out.println("2 - no");
-//                    int answer = sc.nextInt();
-                    int answer = 2;
+                    int answer = YesOrNoChoice();
                     switch (answer){
                         case(1):
                             movement --;
@@ -356,10 +341,7 @@ public class Player {
             case(7):
                 if (index + movement > 12 && index < 13 && resolution && movement != 0){
                     System.out.println("Перейти на внешний круг? (секция 3)");
-                    System.out.println("1 - yes");
-                    System.out.println("2 - no");
-//                    int answer = sc.nextInt();
-                    int answer = 2;
+                    int answer = YesOrNoChoice();
                     switch (answer){
                         case(1):
                             movement --;
@@ -397,10 +379,7 @@ public class Player {
             case(8):
                 if (index + movement > 18 && index < 19 && resolution && movement != 0){
                     System.out.println("Перейти на внешний круг? (секция 4)");
-                    System.out.println("1 - yes");
-                    System.out.println("2 - no");
-//                    int answer = sc.nextInt();
-                    int answer = 2;
+                    int answer = YesOrNoChoice();
                     switch (answer){
                         case(1):
                             movement --;
@@ -488,5 +467,11 @@ public class Player {
 
     public void setY(int y) {
         this.y = y;
+    }
+
+    public static int YesOrNoChoice(){
+        int choice = draw.YesOrNO();
+        System.out.println("test = "+ choice);
+        return choice;
     }
 }
