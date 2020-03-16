@@ -1,6 +1,7 @@
 package com.vnc;
 
 import javax.swing.*;
+import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -56,27 +57,47 @@ public class Draw {
         Toolkit toolkit = Toolkit.getDefaultToolkit();
         Dimension dimension = toolkit.getScreenSize();
         jFrame.setBounds(dimension.width / 2 - 400, dimension.height / 2 - 300, 800, 600);
-//        JFrame.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        jFrame.setExtendedState(JFrame.MAXIMIZED_BOTH);
         jFrame.setTitle("Guilds game");
         jFrame.setIconImage(null);
 
         setMenuBar();
 
         JPanel Panel = new JPanel();
-        JPanel Left = new JPanel();
+        JPanel Top = new JPanel();
+        JPanel Bottom = new JPanel();
         JPanel Card =  Card();
         JPanel Action = Action();
         JPanel PlayerWindow = PlayerWindow();
+        JPanel ButtonAction = ButtonAction();
 
 
+        Panel.setBorder(new EmptyBorder(5,5,5,5));
 
-        Left.setLayout(new BorderLayout(20, 20));
-        Left.add(Card, BorderLayout.CENTER);
-        Left.add(Action, BorderLayout.SOUTH);
 
-        Panel.setLayout(new BorderLayout(20, 20));
-        Panel.add(Left, BorderLayout.CENTER);
-        Panel.add(PlayerWindow, BorderLayout.EAST);
+        Top.setLayout(new BorderLayout(5,5));
+        Top.add(Card, BorderLayout.CENTER);
+        Top.add(PlayerWindow, BorderLayout.EAST);
+
+        Bottom.setLayout(new BorderLayout(5,5));
+        Bottom.add(Action, BorderLayout.CENTER);
+        Bottom.add(ButtonAction, BorderLayout.EAST);
+
+
+        Panel.setLayout(new BorderLayout(5,5));
+        Panel.add(Top, BorderLayout.CENTER);
+        Panel.add(Bottom, BorderLayout.SOUTH);
+
+
+//        Left.setLayout(new BorderLayout(20, 20));
+//        Left.add(Card, BorderLayout.CENTER);
+//        Left.add(Action, BorderLayout.SOUTH);
+//
+//        Panel.setLayout(new BorderLayout(20, 20));
+//        Panel.add(Left, BorderLayout.CENTER);
+//        Panel.add(PlayerWindow, BorderLayout.EAST);
+
+        Card.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 1, Color.GRAY));
 
         jFrame.add(Panel);
 
@@ -299,7 +320,7 @@ public class Draw {
     private JPanel PlayerWindow(){
         JPanel PlayerWindow = new JPanel();
 
-        PlayerWindow.setLayout(new GridLayout(5, 1, 1, 1));
+        PlayerWindow.setLayout(new GridLayout(4, 1, 1, 1));
         Label Player_Name = new Label("Игрок 1");
         Label Player_Gold = new Label("Золото: 0");
         Label Player_Sheep = new Label("Овцы: 0");
@@ -309,9 +330,15 @@ public class Draw {
         PlayerWindow.add(Player_Sheep);
         PlayerWindow.add(Player_Log);
 
+        return PlayerWindow;
+    }
+
+    private JPanel ButtonAction(){
+        JPanel ButtonAction = new JPanel();
+
         JButton End_button = new JButton("Завершить ход");
 
-        PlayerWindow.add(End_button);
+        ButtonAction.add(End_button);
 
         End_button.addActionListener(new ActionListener() {
             @Override
@@ -321,7 +348,7 @@ public class Draw {
             }
         });
 
-        return PlayerWindow;
+        return ButtonAction;
     }
 
     public class StartStep extends JDialog {
@@ -349,8 +376,8 @@ public class Draw {
                     buttons[player.getX()][player.getY()].setBorder(null);
                     int movement = Main.steps();
                     setVisible(false);
-                    player.move(movement);
                     actionlabel.setText("Кубик выпал со стороной: " + movement);
+                    player.move(movement);
                     player.getCurrentPosition();
                     buttons[player.getX()][player.getY()].setBorder(BorderFactory.createLineBorder(Color.red));
 
@@ -365,15 +392,19 @@ public class Draw {
     }
 
     public int YesOrNO() {
-        int select = JOptionPane.showConfirmDialog(null, "Перейти на внутренний круг?",null, JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
-
-        if (select == JOptionPane.YES_OPTION) {
-            select = 1;
-            System.out.println("Выбрал переходить " + select);
-        }
-        else if (select == JOptionPane.NO_OPTION) {
-            select = 2;
-            System.out.println("Выбрал не переходить " + select);
+        int select = 0;
+        boolean check = false;
+        while (check == false) {
+        select = JOptionPane.showConfirmDialog(null, "Совершить переход на другой круг?",null, JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
+            if (select == JOptionPane.YES_OPTION) {
+                select = 1;
+                check = true;
+                System.out.println("Выбрал переходить " + select);
+            } else if (select == JOptionPane.NO_OPTION) {
+                select = 2;
+                check = true;
+                System.out.println("Выбрал не переходить " + select);
+            }
         }
         return select;
     }
