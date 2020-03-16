@@ -3,12 +3,12 @@ package com.vnc;
 import java.util.ArrayList;
 
 public class Player {
-    private static int x;
-    private static int y;
-    private static int index;
-    private static ArrayList<Pair> innerPairs= new ArrayList<>();
-    private static ArrayList<Pair> outerPairs= new ArrayList<>();
-    private static boolean resolution = true;
+    private int x;
+    private int y;
+    private int index;
+    private ArrayList<Pair> innerPairs= new ArrayList<>();
+    private ArrayList<Pair> outerPairs= new ArrayList<>();
+    private boolean resolution = true;
     private short[] innerList = {1,5,1,6,1,7,2,8,3,9,4,9,5,9,6,9,7,9,8,8,9,7,9,6,9,5,9,4,9,3,8,2,7,1,6,1,5,1,4,1,3,1,2,2,1,3,1,4};
     private short[] outerList = {0,0,0,1,0,2,0,3,0,4,0,5,0,6,0,7,0,8,0,9,0,10,1,10,2,10,3,10,4,10,5,10,6,10,7,10,8,10,9,10,10,10,10,9,10,8,10,7,10,6,10,5,10,4,10,3,10,2,10,1,10,0,9,0,8,0,7,0,6,0,5,0,4,0,3,0,2,0,1,0};
     private String type;
@@ -474,10 +474,6 @@ public class Player {
         System.out.println("test = "+ choice);
         return choice;
     }
-
-
-//    private static ArrayList<Player> players = new ArrayList<>();
-//    private static short[] skills = {1,2,3,4,5,6,7,8,9,10,11,12};
 //
 //    public void configuration(int count){
 //
