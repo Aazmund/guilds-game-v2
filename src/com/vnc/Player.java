@@ -17,7 +17,7 @@ public class Player {
     private int sheep;
     private int horse;
 
-    private static Draw draw;
+    private Draw draw;
     public void  getDraw(Draw draw){
         this.draw = draw;
     }
@@ -88,7 +88,7 @@ public class Player {
         this.sheep += sheep;
     }
 
-    private static void searchOuterIndex(){
+    private void searchOuterIndex(){
         for (int i = 0; i < outerPairs.size(); i++){
             if(x == outerPairs.get(i).getX() && y == outerPairs.get(i).getY()){
                 index = i;
@@ -96,7 +96,7 @@ public class Player {
         }
     }
 
-    private static void searchInnerIndex(){
+    private void searchInnerIndex(){
         for (int i = 0; i < innerPairs.size(); i++){
             if(x == innerPairs.get(i).getX() && y == innerPairs.get(i).getY()){
                 index = i;
@@ -104,7 +104,7 @@ public class Player {
         }
     }
 
-    private static void moveOnOuterCircle(int param, int movement){
+    private void moveOnOuterCircle(int param, int movement){
         searchOuterIndex();
         switch (param){
             case(1):
@@ -259,7 +259,7 @@ public class Player {
         }
     }
 
-    private static void moveOnInnerCircle(int param, int movement){
+    private void moveOnInnerCircle(int param, int movement){
         searchInnerIndex();
         switch (param){
             case(5):
@@ -417,7 +417,7 @@ public class Player {
         }
     }
 
-    public static void move(int movement){
+    public void move(int movement){
 
         if(x == 0 && y >= 0 && y <= 9){
             moveOnOuterCircle(1, movement);
@@ -438,7 +438,7 @@ public class Player {
         }
     }
 
-    public static void setStartPosition(){
+    public void setStartPosition(){
         x = 0;
         y = 0;
     }
@@ -448,7 +448,7 @@ public class Player {
         this.y = y;
     }
 
-    public static void getCurrentPosition(){
+    public void getCurrentPosition(){
         System.out.println("x "+ x);
         System.out.println("y "+ y);
     }
@@ -469,9 +469,95 @@ public class Player {
         this.y = y;
     }
 
-    public static int YesOrNoChoice(){
+    public int YesOrNoChoice(){
         int choice = draw.YesOrNO();
         System.out.println("test = "+ choice);
         return choice;
     }
+
+
+//    private static ArrayList<Player> players = new ArrayList<>();
+//    private static short[] skills = {1,2,3,4,5,6,7,8,9,10,11,12};
+//
+//    public void configuration(int count){
+//
+//        for(int i = 11; i > 0; i--){
+//            int j = (int) (Math.random() * (i + 1));
+//            short buf = skills[i];
+//            skills[i] = skills[j];
+//            skills[j] = buf;
+//        }
+//
+//        for (int i = 0; i < count; i++){
+//            Player player = new Player();
+//            player.setStartPosition();
+//            players.add(player);
+//            switch (skills[i]){
+//                case(1):
+//                    player.setGold(150);
+//                    player.setForest(2);
+//                    player.setSheep(2);
+//                    break;
+//                case(2):
+//                    player.setGold(210);
+//                    player.setForest(2);
+//                    player.setSheep(2);
+//                    break;
+//                case(3):
+//                    player.setGold(50);
+//                    player.setForest(2);
+//                    player.setSheep(2);
+//                    break;
+//                case(4):
+//                    player.setGold(150);
+//                    player.setForest(2);
+//                    player.setSheep(2);
+//                    break;
+//                case(5):
+//                    player.setGold(150);
+//                    player.setForest(2);
+//                    player.setSheep(2);
+//                    break;
+//                case(6):
+//                    player.setGold(150);
+//                    player.setForest(2);
+//                    player.setSheep(2);
+//                    break;
+//                case(7):
+//                    player.setGold(150);
+//                    player.setForest(2);
+//                    player.setSheep(3);
+//                    break;
+//                case(8):
+//                    player.setGold(300);
+//                    player.setForest(1);
+//                    player.setSheep(1);
+//                    break;
+//                case(9):
+//                    player.setGold(150);
+//                    player.setForest(2);
+//                    player.setSheep(2);
+//                    break;
+//                case(10):
+//                    player.setGold(150);
+//                    player.setForest(2);
+//                    player.setSheep(2);
+//                    break;
+//                case(11):
+//                    player.setGold(150);
+//                    player.setForest(1);
+//                    player.setSheep(1);
+//                    player.setHorse(1);
+//                    break;
+//                case(12):
+//                    player.setGold(100);
+//                    player.setForest(2);
+//                    player.setSheep(2);
+//                    break;
+//            }
+//        }
+//    }
+
+
+
 }

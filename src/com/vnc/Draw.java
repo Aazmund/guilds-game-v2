@@ -25,7 +25,7 @@ public class Draw {
     };
 
 
-    private static JButton[][] buttons = new JButton[11][11];
+    private  JButton[][] buttons = new JButton[11][11];
 
 //    private static JPanel [][] panels = new JPanel[11][11];
 
@@ -35,7 +35,7 @@ public class Draw {
         this.player = player;
     }
 
-    private static JLabel actionlabel = new JLabel();
+    private  JLabel actionlabel = new JLabel();
 
     public void setMap(String map[][]){
         for (int i = 0; i < 11; i++){
@@ -47,7 +47,7 @@ public class Draw {
         }
     }
 
-    public static JFrame getFrame(){
+    public JFrame getFrame(){
 
         jFrame.setVisible(true);
         jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -79,107 +79,109 @@ public class Draw {
         jFrame.add(Panel);
 
 
+        new StartStep();
         jFrame.revalidate();
 
-        new StartStep();
+
         return jFrame;
     }
 
-    private static class StartDialog extends JDialog {
-        private StartDialog() {
-            super(jFrame, "Старт игры", true);
-            Toolkit toolkit = Toolkit.getDefaultToolkit();
-            Dimension dimension = toolkit.getScreenSize();
-            setBounds(dimension.width / 2 - 160, dimension.height / 2 - 75, 320, 150);
+//    private static class StartDialog extends JDialog {
+//        private StartDialog() {
+//            super(jFrame, "Старт игры", true);
+//            Toolkit toolkit = Toolkit.getDefaultToolkit();
+//            Dimension dimension = toolkit.getScreenSize();
+//            setBounds(dimension.width / 2 - 160, dimension.height / 2 - 75, 320, 150);
+//
+//            setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
+//
+//            JPanel Top_Panel = new JPanel();
+//            JPanel Center_Panel = new JPanel();
+//            JPanel Bottom_Panel = new JPanel();
+//            add(Top_Panel);
+//            add(Center_Panel);
+//            add(Bottom_Panel);
+//            //Добавление кнопок выбора количества игроков
+//            Top_Panel.add(new Label("Выберите количество игроков:"));
+//            JRadioButton player_2 = new JRadioButton("2");
+//            JRadioButton player_3 = new JRadioButton("3");
+//            JRadioButton player_4 = new JRadioButton("4");
+//            JRadioButton player_5 = new JRadioButton("5");
+//            JRadioButton player_6 = new JRadioButton("6");
+//            JRadioButton player_7 = new JRadioButton("7");
+//            JRadioButton player_8 = new JRadioButton("8");
+//            //Два игрока по умолчанию
+//            player_2.setSelected(true);
+//            //Создания группы выбора количества игроков
+//            ButtonGroup Players_num_Group = new ButtonGroup();
+//            Players_num_Group.add(player_2);
+//            Players_num_Group.add(player_3);
+//            Players_num_Group.add(player_4);
+//            Players_num_Group.add(player_5);
+//            Players_num_Group.add(player_6);
+//            Players_num_Group.add(player_7);
+//            Players_num_Group.add(player_8);
+//            //Добавления на панель кнопок выбора количества игроков
+//            Center_Panel.add(player_2);
+//            Center_Panel.add(player_3);
+//            Center_Panel.add(player_4);
+//            Center_Panel.add(player_5);
+//            Center_Panel.add(player_6);
+//            Center_Panel.add(player_7);
+//            Center_Panel.add(player_8);
+//
+//
+//            JButton Start = new JButton("Начать игру");
+//            Bottom_Panel.add(Start);
+//
+//            Start.addActionListener(new ActionListener() {
+//                @Override
+//                public void actionPerformed(ActionEvent actionEvent) {
+//                    int num = 0;
+//                    if (player_2.isSelected()) {
+//                        num = 2;
+//                        player.configuration(num);
+//
+//                    } else if (player_3.isSelected()) {
+//                        num = 3;
+//                        player.configuration(num);
+//                    } else if (player_4.isSelected()) {
+//                        num = 4;
+//                        player.configuration(num);
+//                    } else if (player_5.isSelected()) {
+//                        num = 5;
+//                        player.configuration(num);
+//                    } else if (player_6.isSelected()) {
+//                        num = 6;
+//                        player.configuration(num);
+//                    } else if (player_7.isSelected()) {
+//                        num = 7;
+//                        player.configuration(num);
+//                    } else if (player_8.isSelected()) {
+//                        num = 8;
+//                        player.configuration(num);
+//                    }
+//
+//
+//                    System.out.println("Количество игроков: " + num);
+//                    setVisible(false);
+//                }
+//            });
+//
+//            add(Top_Panel, BorderLayout.NORTH);
+//            add(Center_Panel, BorderLayout.CENTER);
+//            add(Bottom_Panel, BorderLayout.SOUTH);
+//
+//            setVisible(true);
+//
+//        }
+//    }
+//
+//    public void getStartDialog(){
+//       new StartDialog();
+//    }
 
-            setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
-
-            JPanel Top_Panel = new JPanel();
-            JPanel Center_Panel = new JPanel();
-            JPanel Bottom_Panel = new JPanel();
-            add(Top_Panel);
-            add(Center_Panel);
-            add(Bottom_Panel);
-            //Добавление кнопок выбора количества игроков
-            Top_Panel.add(new Label("Выберите количество игроков:"));
-            JRadioButton player_2 = new JRadioButton("2");
-            JRadioButton player_3 = new JRadioButton("3");
-            JRadioButton player_4 = new JRadioButton("4");
-            JRadioButton player_5 = new JRadioButton("5");
-            JRadioButton player_6 = new JRadioButton("6");
-            JRadioButton player_7 = new JRadioButton("7");
-            JRadioButton player_8 = new JRadioButton("8");
-            //Два игрока по умолчанию
-            player_2.setSelected(true);
-            //Создания группы выбора количества игроков
-            ButtonGroup Players_num_Group = new ButtonGroup();
-            Players_num_Group.add(player_2);
-            Players_num_Group.add(player_3);
-            Players_num_Group.add(player_4);
-            Players_num_Group.add(player_5);
-            Players_num_Group.add(player_6);
-            Players_num_Group.add(player_7);
-            Players_num_Group.add(player_8);
-            //Добавления на панель кнопок выбора количества игроков
-            Center_Panel.add(player_2);
-            Center_Panel.add(player_3);
-            Center_Panel.add(player_4);
-            Center_Panel.add(player_5);
-            Center_Panel.add(player_6);
-            Center_Panel.add(player_7);
-            Center_Panel.add(player_8);
-
-
-            JButton Start = new JButton("Начать игру");
-            Bottom_Panel.add(Start);
-
-            final int[] num = {2};
-            Start.addActionListener(new ActionListener() {
-                @Override
-                public void actionPerformed(ActionEvent actionEvent) {
-
-                    if (player_2.isSelected()) {
-                        num[0] = 2;
-                        Main.configuration(num[0]);
-                    } else if (player_3.isSelected()) {
-                        num[0] = 3;
-                        Main.configuration(num[0]);
-                    } else if (player_4.isSelected()) {
-                        num[0] = 4;
-                        Main.configuration(num[0]);
-                    } else if (player_5.isSelected()) {
-                        num[0] = 5;
-                        Main.configuration(num[0]);
-                    } else if (player_6.isSelected()) {
-                        num[0] = 6;
-                        Main.configuration(num[0]);
-                    } else if (player_7.isSelected()) {
-                        num[0] = 7;
-                        Main.configuration(num[0]);
-                    } else if (player_8.isSelected()) {
-                        num[0] = 8;
-                        Main.configuration(num[0]);
-                    }
-
-                    System.out.println("Количество игроков: " + num[0]);
-                    setVisible(false);
-                }
-            });
-
-            add(Top_Panel, BorderLayout.NORTH);
-            add(Center_Panel, BorderLayout.CENTER);
-            add(Bottom_Panel, BorderLayout.SOUTH);
-
-            setVisible(true);
-
-        }
-    }
-
-    public void getStartDialog(){
-       new StartDialog();
-    }
-
-    private static JMenuBar setMenuBar(){
+    private  JMenuBar setMenuBar(){
         JMenuBar jMenuBar = new JMenuBar();
         JMenu Game = new JMenu("Игра");
         JMenuItem New_Game = Game.add(new JMenuItem("Новая игра"));
@@ -236,7 +238,7 @@ public class Draw {
         return jMenuBar;
     }
 
-    private static class AuthorDialog extends JDialog {
+    private  class AuthorDialog extends JDialog {
         private AuthorDialog() {
             super(jFrame, "Об авторе", true);
 
@@ -254,7 +256,7 @@ public class Draw {
         }
     }
 
-    private static JPanel Card(){
+    private  JPanel Card(){
         JPanel Card = new JPanel();
 
         Card.setLayout(new GridLayout(11, 11, 1, 1));
@@ -286,14 +288,14 @@ public class Draw {
         return Card;
     }
 
-    private static JPanel Action(){
+    private JPanel Action(){
         JPanel Action = new JPanel();
         Action.add(new Label("История действий:") );
         Action.add(actionlabel);
         return Action;
     }
 
-    private static JPanel PlayerWindow(){
+    private JPanel PlayerWindow(){
         JPanel PlayerWindow = new JPanel();
 
         PlayerWindow.setLayout(new GridLayout(5, 1, 1, 1));
@@ -314,14 +316,15 @@ public class Draw {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 new StartStep();
+
             }
         });
 
         return PlayerWindow;
     }
 
-    private static class StartStep extends JDialog {
-        private StartStep(){
+    public class StartStep extends JDialog {
+       public StartStep(){
             super(jFrame, "Начало хода", true);
             Toolkit toolkit = Toolkit.getDefaultToolkit();
             Dimension dimension = toolkit.getScreenSize();
@@ -345,9 +348,9 @@ public class Draw {
                     buttons[player.getX()][player.getY()].setBorder(null);
                     int movement = Main.steps();
                     setVisible(false);
-                    Player.move(movement);
+                    player.move(movement);
                     actionlabel.setText("Кубик выпал со стороной: " + movement);
-                    Player.getCurrentPosition();
+                    player.getCurrentPosition();
                     buttons[player.getX()][player.getY()].setBorder(BorderFactory.createLineBorder(Color.red));
 
                 }
