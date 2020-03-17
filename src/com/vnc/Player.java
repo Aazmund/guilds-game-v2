@@ -1,5 +1,6 @@
 package com.vnc;
 
+import javax.swing.*;
 import java.util.ArrayList;
 
 public class Player {
@@ -110,9 +111,9 @@ public class Player {
             case(1):
                 if (y + movement > 5 && y < 6 && resolution){
                     System.out.println("Перейти на внутреннйи круг? (секция 5)");
-                    int answer = YesOrNoChoice();
+                    int answer = JOptionPane.showConfirmDialog(null, "Совершить переход на другой круг?",null, JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
                     switch (answer){
-                        case(1):
+                        case(0):
                             movement = movement - (5 - y) - 1;
                             x = 1;
                             y = 5;
@@ -120,7 +121,7 @@ public class Player {
                             move(movement);
                             break;
 
-                        case(2):
+                        case(1):
                             if (y + movement > 9){
                                 movement = movement - (9 - y) - 1;
                                 x = 0;
@@ -148,16 +149,16 @@ public class Player {
             case(2):
                 if(x + movement > 5 && x < 6 && resolution){
                     System.out.println("Перейти на внутреннйи круг? (секция 6)");
-                    int answer = YesOrNoChoice();
+                    int answer = JOptionPane.showConfirmDialog(null, "Совершить переход на другой круг?",null, JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
                     switch (answer){
-                        case(1):
+                        case(0):
                             movement = movement - (5 - x) - 1;
                             x = 5;
                             y = 9;
                             resolution = false;
                             move(movement);
                             break;
-                        case(2):
+                        case(1):
                             if (x + movement > 9){
                                 movement = movement - (9 - x) - 1;
                                 x = 10;
@@ -185,16 +186,16 @@ public class Player {
             case(3):
                 if (y - movement < 5 && y > 5 && resolution){
                     System.out.println("Перейти на внутреннйи круг? (секция 7)");
-                    int answer = YesOrNoChoice();
+                    int answer = JOptionPane.showConfirmDialog(null, "Совершить переход на другой круг?",null, JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
                     switch (answer){
-                        case(1):
+                        case(0):
                             movement = movement - (10 - y) - 1;
                             x = 9;
                             y = 5;
                             resolution = false;
                             move(movement);
                             break;
-                        case(2):
+                        case(1):
                             if (y - movement < 1){
                                 movement = movement - y;
                                 x = 10;
@@ -222,16 +223,16 @@ public class Player {
             case(4):
                 if(x - movement < 5 && x > 5 && resolution){
                     System.out.println("Перейти на внутреннйи круг? (секция 8)");
-                    int answer = YesOrNoChoice();
+                    int answer = JOptionPane.showConfirmDialog(null, "Совершить переход на другой круг?",null, JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
                     switch (answer){
-                        case(1):
+                        case(0):
                             movement = movement - (x - 5) - 1;
                             x = 5;
                             y = 1;
                             resolution = false;
                             move(movement);
                             break;
-                        case(2):
+                        case(1):
                             if(x - movement < 1){
                                 movement = movement - x;
                                 x = 0;
@@ -265,9 +266,9 @@ public class Player {
             case(5):
                 if (index + movement > 0 && index < 1 && resolution && movement != 0){
                     System.out.println("Перейти на внешний круг? (секция 1)");
-                    int answer = YesOrNoChoice();
+                    int answer = JOptionPane.showConfirmDialog(null, "Совершить переход на другой круг?",null, JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
                     switch (answer){
-                        case(1):
+                        case(0):
                             movement --;
                             x = 0;
                             y = 5;
@@ -275,7 +276,7 @@ public class Player {
                             move(movement);
                             break;
 
-                        case(2):
+                        case(1):
                             if(index + movement > 5){
                                 movement = (index + movement) - movement;
                                 x = 5;
@@ -303,9 +304,9 @@ public class Player {
             case(6):
                 if (index + movement > 6 && index < 7 && resolution && movement != 0){
                     System.out.println("Перейти на внешний круг? (секция 2)");
-                    int answer = YesOrNoChoice();
+                    int answer = JOptionPane.showConfirmDialog(null, "Совершить переход на другой круг?",null, JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
                     switch (answer){
-                        case(1):
+                        case(0):
                             movement --;
                             x = 5;
                             y = 10;
@@ -313,7 +314,7 @@ public class Player {
                             move(movement);
                             break;
 
-                        case(2):
+                        case(1):
                             if(index + movement > 11){
                                 movement = (index - 6 + movement) - movement;
                                 x = 9;
@@ -341,9 +342,9 @@ public class Player {
             case(7):
                 if (index + movement > 12 && index < 13 && resolution && movement != 0){
                     System.out.println("Перейти на внешний круг? (секция 3)");
-                    int answer = YesOrNoChoice();
+                    int answer = JOptionPane.showConfirmDialog(null, "Совершить переход на другой круг?",null, JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
                     switch (answer){
-                        case(1):
+                        case(0):
                             movement --;
                             x = 10;
                             y = 5;
@@ -351,7 +352,7 @@ public class Player {
                             move(movement);
                             break;
 
-                        case(2):
+                        case(1):
                             if(index + movement > 17){
                                 movement = (index - 12 + movement) - movement;
                                 x = 5;
@@ -379,9 +380,9 @@ public class Player {
             case(8):
                 if (index + movement > 18 && index < 19 && resolution && movement != 0){
                     System.out.println("Перейти на внешний круг? (секция 4)");
-                    int answer = YesOrNoChoice();
+                    int answer = JOptionPane.showConfirmDialog(null, "Совершить переход на другой круг?",null, JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
                     switch (answer){
-                        case(1):
+                        case(0):
                             movement --;
                             x = 5;
                             y = 0;
@@ -389,7 +390,7 @@ public class Player {
                             move(movement);
                             break;
 
-                        case(2):
+                        case(1):
                             if(index + movement > 23){
                                 movement = (index - 18 + movement) - movement;
                                 x = 1;

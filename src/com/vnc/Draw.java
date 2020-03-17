@@ -11,6 +11,8 @@ public class Draw {
 
     public static JFrame jFrame = new JFrame();
 
+    private boolean end = true;
+
     private static String[][] tileMap = {
             {"9", "9", "9", "9", "9", "9", "9", "9", "9", "9", "9"},
             {"9", "*", "*", "9", "9", "9", "9", "9", "*", "*", "9"},
@@ -28,17 +30,59 @@ public class Draw {
 
     private  JButton[][] buttons = new JButton[11][11];
 
-    public Configurator configurator = new Configurator();
+//    public Configurator configurator = new Configurator();
 
 //    private static JPanel [][] panels = new JPanel[11][11];
 
-    private static Player player;
+//    private static Player player;
 
-    public void setPlayer(Player player){
-        this.player = player;
+//    public void setPlayer(Player player){
+//        this.player = player;
+//    }
+
+    public void setEnd(boolean end){
+        this.end = end;
+    }
+
+    public boolean getEnd(){
+        return end;
+    }
+
+    public JLabel playerName = new JLabel();
+
+    public void setPlayerName(String playerName) {
+        this.playerName.setText(playerName);
+    }
+
+    public JLabel playerGold = new JLabel();
+
+    public void setPlayerGold(String playerGold) {
+        this.playerGold.setText(playerGold);
+    }
+
+    public JLabel playerSheep = new JLabel();
+
+    public void setPlayerSheep(String playerSheep) {
+        this.playerSheep.setText(playerSheep);
+    }
+
+    public JLabel playerLog = new JLabel();
+
+    public void setPlayerLog(String playerLog) {
+        this.playerLog.setText(playerLog);
+    }
+
+    public void setActionlabel(String actionlabel) {
+        this.actionlabel.setText(actionlabel);
     }
 
     private  JLabel actionlabel = new JLabel();
+
+    private int playerCount;
+
+    public int getPlayerCount() {
+        return playerCount;
+    }
 
     public void setMap(String map[][]){
         for (int i = 0; i < 11; i++){
@@ -103,7 +147,7 @@ public class Draw {
 
         jFrame.revalidate();
 
-        new StartStep();
+//        new StartStep();
 
         return jFrame;
     }
@@ -162,26 +206,26 @@ public class Draw {
                     int num = 0;
                     if (player_2.isSelected()) {
                         num = 2;
-                        configurator.setNum(num);
+                        playerCount = 2;
 
                     } else if (player_3.isSelected()) {
                         num = 3;
-                        configurator.setNum(num);
+                        playerCount = 3;
                     } else if (player_4.isSelected()) {
                         num = 4;
-                        configurator.setNum(num);
+                        playerCount = 4;
                     } else if (player_5.isSelected()) {
                         num = 5;
-                        configurator.setNum(num);
+                        playerCount = 5;
                     } else if (player_6.isSelected()) {
                         num = 6;
-                        configurator.setNum(num);
+                        playerCount = 6;
                     } else if (player_7.isSelected()) {
                         num = 7;
-                        configurator.setNum(num);
+                        playerCount = 7;
                     } else if (player_8.isSelected()) {
                         num = 8;
-                        configurator.setNum(num);
+                        playerCount = 8;
                     }
 
 
@@ -296,7 +340,7 @@ public class Draw {
             }
         }
 
-        buttons[0][0].setBorder(BorderFactory.createLineBorder(Color.red));
+//        buttons[0][0].setBorder(BorderFactory.createLineBorder(Color.red));
 
 //        for (int a = 0; a < 11; a++) {
 //            for (int b = 0; b < 11; b++) {
@@ -321,10 +365,10 @@ public class Draw {
         JPanel PlayerWindow = new JPanel();
 
         PlayerWindow.setLayout(new GridLayout(4, 1, 1, 1));
-        Label Player_Name = new Label("Игрок 1");
-        Label Player_Gold = new Label("Золото: 0");
-        Label Player_Sheep = new Label("Овцы: 0");
-        Label Player_Log = new Label("Бревна: 0");
+        JLabel Player_Name = playerName;
+        JLabel Player_Gold = playerGold;
+        JLabel Player_Sheep = playerSheep;
+        JLabel Player_Log = playerLog;
         PlayerWindow.add(Player_Name);
         PlayerWindow.add(Player_Gold);
         PlayerWindow.add(Player_Sheep);
@@ -333,7 +377,7 @@ public class Draw {
         return PlayerWindow;
     }
 
-    private JPanel ButtonAction(){
+    public JPanel ButtonAction(){
         JPanel ButtonAction = new JPanel();
 
         JButton End_button = new JButton("Завершить ход");
@@ -343,8 +387,7 @@ public class Draw {
         End_button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                new StartStep();
-
+                end = false;
             }
         });
 
@@ -373,14 +416,14 @@ public class Draw {
             Start.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent actionEvent) {
-                    buttons[player.getX()][player.getY()].setBorder(null);
-                    int movement = Main.steps();
-                    setVisible(false);
-                    actionlabel.setText("Кубик выпал со стороной: " + movement);
-                    player.move(movement);
-                    player.getCurrentPosition();
-                    buttons[player.getX()][player.getY()].setBorder(BorderFactory.createLineBorder(Color.red));
-
+//                    buttons[player.getX()][player.getY()].setBorder(null);
+//                    int movement = Main.steps();
+//                    setVisible(false);
+//                    actionlabel.setText("Кубик выпал со стороной: " + movement);
+//                    player.move(movement);
+//                    player.getCurrentPosition();
+//                    buttons[player.getX()][player.getY()].setBorder(BorderFactory.createLineBorder(Color.red));
+//
                 }
             });
 
@@ -409,12 +452,12 @@ public class Draw {
         return select;
     }
 
-    public int getCount(){
-        return configurator.getNum();
-    }
-
-    public Player getListElement(int index){
-        return configurator.getByIndex(index);
-    }
+//    public int getCount(){
+//        return configurator.getNum();
+//    }
+//
+//    public Player getListElement(int index){
+//        return configurator.getByIndex(index);
+//    }
 
 }
